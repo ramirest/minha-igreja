@@ -1,0 +1,346 @@
+
+/* Basic Typography & Colors
+-------------------------------------------------------------- */
+/* Add general site styling here for typography and background */
+body {
+  font-size: 13px;
+  font-family: Arial,Helvetica,Verdana,sans-serif;
+}
+
+/* Force 960 as Desktop max-width */
+@media all and (min-width: 851px) {
+  #header div.section,
+  #featured div.section,
+  #messages div.section,
+  #main,
+  #triptych,
+  #footer-columns,
+  #footer {
+    max-width: 960px;
+  }
+}
+
+
+/* Default link styles - separate a:visited for a different visited link style */
+a,
+a:link,
+a:visited {
+  text-decoration: underline;
+}
+
+/* Hover/active link styles. Don't forget :focus for accessibility */
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+
+/* Specific Typography
+-------------------------------------------------------------- */
+#name-and-slogan {
+  padding: 16px 0 0;
+  margin: 0 0 42px 15px;
+}
+#site-name {
+  font-family: Georgia; /** default if google fonts not enabled **/
+  font-size: 2.2em;
+  margin-top: 9px;
+  margin-bottom: 7px;
+  max-width: 260px; /* For long titles */
+}
+
+#site-name a:link,
+#site-name a:visited,
+#site-name a:hover,
+#site-name a:active {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+#content h3.title, #content h2.pane-title {
+  padding: 10px 13px;
+  margin-bottom: 1em;
+}
+
+/* HTML Elements
+-------------------------------------------------------------- */
+body {
+}
+
+/* Google fonts */
+body h1.title, body #site-name, .sidebar h2, h2.pane-title, #triptych h2 {
+  font-family: "Neuton", Georgia; font-weight: normal;
+}
+
+#header-inner {
+  background-image: url('../images/oc-gray-header-bg.png');
+  background-position: bottom left;
+  background-repeat: repeat-x;
+}
+
+.region-header {
+  border: 0;
+}
+
+/* Forms
+-------------------------------------------------------------- */
+#main-wrapper input.form-text,
+#main-wrapper textarea {
+  padding: 9px;
+  border: solid 1px #E5E5E5;
+  outline: 0;
+  background: #FFFFFF;
+  background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+  background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+  box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+  -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+  -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+  max-width: 100%;
+}
+
+#main-wrapper textarea {
+  line-height: 150%;
+}
+
+#main-wrapper input.form-text:hover,
+#main-wrapper textarea:hover,
+#main-wrapper input.form-text:focus,
+#main-wrapper textarea:focus {
+  border-color: #C9C9C9;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+}
+
+#main-wrapper .form-item label {
+  color: #999999;
+}
+
+/* Site Info
+-------------------------------------------------------------- */
+/* Add float here to put logo and site name side by side, also add margins as
+  needed */
+#logo {
+  float: left;
+  padding: 2px 5px 15px 10px;
+}
+
+#logo img {
+  /*height: 40px;*/
+}
+
+/* Regions
+-------------------------------------------------------------- */
+
+
+/* Site info + Header Region
+-------------------------------------------------------------- */
+.header-group {
+  position: relative;
+  z-index: 500;
+  height: 83px;
+  margin-bottom: 10px;
+}
+
+#header-site-info {
+  margin-top: 0;
+  padding-top: 15px;
+}
+
+
+/* Footer
+-------------------------------------------------------------- */
+#footer-wrapper {
+  padding-top: 10px;
+}
+
+#footer {
+  margin-top: 0;
+  border-top: 0;
+}
+
+@media all and (min-width: 461px) {
+  #footer #block-search-form {
+    width: 40%;
+    float: left;
+  }
+  #footer #block-search-form input.form-text {
+    float: left;
+    width: 60%;
+  }
+  #footer #block-menu-menu-secondary-links {
+    float: right;
+    clear: none;
+    width: auto;
+  }
+}
+
+#footer #block-search-form input.form-text {
+  height: 15px;
+}
+
+#footer #block-menu-menu-secondary-links {
+  margin-top: 9px;
+  margin-right: 15px;
+}
+
+#footer #block-menu-menu-secondary-links ul.menu li {
+  display: inline;
+}
+
+/*  Main Area (content + sidebars)
+-------------------------------------------------------------- */
+body.front #main {
+  margin-bottom: 0;
+}
+
+#main {
+  margin-bottom: 20px;
+}
+
+/* Sidebar Regions
+-------------------------------------------------------------- */
+
+.sidebar h2 {
+  border-bottom: 0;
+  padding: 10px 13px;
+  text-shadow: none;
+  border-radius: .3em .3em 0 0;
+  -webkit-border-radius: .3em .3em 0 0;
+  -moz-border-radius: .3em .3em 0 0;
+  font-size: 18px;
+}
+
+.sidebar .block {
+  border: 0;
+  border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  padding: 0;
+}
+
+.sidebar .block:last-child {
+  margin-bottom: 0;
+}
+
+.content {
+  margin-top: 10px;
+}
+
+.sidebar .content {
+  padding: 0 10px 15px;
+}
+
+
+/*  Bottom Blocks Area
+-------------------------------------------------------------- */
+
+#triptych-wrapper {
+  background: #fff;
+  border-top: 0;
+}
+
+#triptych .region {
+  padding: 0;
+}
+
+@media all and (max-width: 850px) {
+  .region-triptych-first, .region-triptych-middle, .region-triptych-last {
+    width: 100%;
+  }
+  #triptych-wrapper {
+    padding: 0 15px;
+  }
+}
+
+@media all and (min-width: 851px) {
+  #triptych .region-triptych-first {
+    padding-right: 16px;
+  }
+
+  #triptych .region-triptych-middle {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  #triptych .region-triptych-last {
+    padding-left: 16px;
+  }
+}
+
+#triptych .block {
+  border-bottom: 0;
+}
+
+#triptych .content {
+  padding: 3px;
+  font-size: 12px;
+  line-height: 1.5em
+}
+
+#triptych h2 {
+  padding: 10px 13px;
+  text-shadow: none;
+  text-align: left;
+  margin: 0;
+}
+
+
+/* Page titles
+/-------------------------------------------------------------- */
+/* Page and full node titles */
+h1#page-title {
+  margin-top: .5em;
+  margin-bottom: 1em;
+}
+
+
+/* Tab Area
+-------------------------------------------------------------- */
+ul.tabs {
+  margin-left: 0;
+  position: relative;
+  z-index: 495;
+}
+
+
+/* OpenChurch Blocks & Pages from Install Profile
+/-------------------------------------------------------------- */
+
+/*************************************
+  Weekly Meeting Times Block
+*************************************/
+#block-block-5 .content p {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+
+/*************************************
+  View Map Directions Block
+*************************************/
+#block-block-2 .content {
+  font-size: 1.2em;
+  padding: 15px 10px;
+  text-align: center;
+}
+#block-block-2 .content p {
+  margin: 0;
+}
+
+
+/*************************************
+  Contact Us Block
+*************************************/
+#block-block-4 .large {
+  font-size: 2em;
+}
+
+/*************************************
+  Image Acknowledgements
+*************************************/
+body.page-node-22 #page-page .field-name-body td {
+  background: #fff;
+}

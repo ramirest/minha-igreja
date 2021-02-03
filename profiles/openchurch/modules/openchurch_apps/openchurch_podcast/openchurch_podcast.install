@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ */
+function openchurch_podcast_install() {
+  // Add RSS date.
+  db_query('REPLACE INTO {date_format_type} VALUES (:type, :title, 0)', array(':type' => 'openchurch_rss_date', ':title' => 'OpenChurch RSS Date'));
+  db_query('REPLACE INTO {date_formats} VALUES (NULL, :format, :type, 0)', array(':format' => 'D, d M Y H:i:s T', ':type' => 'rss'));
+  variable_set('date_format_openchurch_rss_date', 'D, d M Y H:i:s T');
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function openchurch_podcast_uninstall() {
+
+}
+
+/**
+ * Add RSS date format.
+ */
+function openchurch_podcast_update_7000() {
+  // Add RSS date.
+  db_query('REPLACE INTO {date_format_type} VALUES (:type, :title, 0)', array(':type' => 'openchurch_rss_date', ':title' => 'OpenChurch RSS Date'));
+  db_query('REPLACE INTO {date_formats} VALUES (NULL, :format, :type, 0)', array(':format' => 'D, d M Y H:i:s T', ':type' => 'rss'));
+  variable_set('date_format_openchurch_rss_date', 'D, d M Y H:i:s T');
+
+  module_enable(array('views_rss_itunes', 'getid3'));
+}

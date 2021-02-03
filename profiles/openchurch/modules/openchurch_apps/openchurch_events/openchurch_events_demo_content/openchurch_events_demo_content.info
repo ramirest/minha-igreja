@@ -1,0 +1,15 @@
+name = "OpenChurch Events Demo Content"
+description = "Sample events for the OpenChurch Events app"
+core = "7.x"
+package = "OpenChurch"
+php = "5.2.4"
+version = "7.x-1.0-alpha1"
+project = "openchurch_events_demo_content"
+dependencies[] = "openchurch_events"
+
+; Information added by Drupal.org packaging script on 2014-12-23
+version = "7.x-2.1-alpha4"
+core = "7.x"
+project = "openchurch_apps"
+datestamp = "1419344952"
+

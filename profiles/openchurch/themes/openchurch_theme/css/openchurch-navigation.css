@@ -1,0 +1,128 @@
+/* Primary Menu
+/-------------------------------------------------------------- */
+/* Add general styles for primary menu here, such as typography, borders, floats,
+  or spacing above/below */
+
+#block-superfish-1 {
+  float: right;
+  width: auto;
+  overflow: visible;
+  display: none;
+  margin-top: 4px;
+}
+
+/* We are only using Superfish for the Desktop menu */
+@media all and (min-width: 901px) {
+  #block-superfish-1 {
+    display: block;
+  }
+  #main-menu {
+    display: none;
+  }
+}
+
+#main-menu {
+  margin-bottom: 5px;
+}
+
+@media all and (min-width: 461px) {
+  #main-menu {
+    margin-bottom: 10px;
+  }
+}
+
+
+#block-superfish-1 .inner {
+  position: relative;
+}
+
+/* styles for Superfish primary menu */
+#block-superfish-1 ul.sf-menu, #block-superfish-1 ul {
+  margin-left: 0;
+}
+
+#block-superfish-1 .sf-shadow ul {
+  border-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  padding: 0 !important;
+}
+
+/* Link style for top level menu items, add padding here */
+#block-superfish-1 ul.sf-menu a,
+#block-superfish-1 ul.sf-menu a:visited  {
+  padding: 7px 6px;
+  font-weight: normal;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-top: 7px solid transparent;
+}
+
+#block-superfish-1 ul.sf-menu a.active,
+#block-superfish-1 ul.sf-menu a.active:visited {
+  padding-top: 8px;
+  font-weight: bold;
+}
+
+/* These are the top level menu items, add border-right here for separators */
+#block-superfish-1 ul.sf-menu li {
+  margin-left: 1.5em;
+}
+
+/* Add border-right: 0; here to remove separator on last menu item */
+#block-superfish-1 ul.sf-menu li.last {
+}
+
+/* Style for container of dropdown, add background or border */
+#block-superfish-1 ul.sf-menu ul {
+  margin-top: 10px;
+}
+
+/* Style for individual dropdown menu items, add border-bottom for separators */
+#block-superfish-1 ul.sf-menu li li {
+  margin-left: 0;
+}
+  #block-superfish-1 ul.sf-menu li li a,
+  #block-superfish-1 ul.sf-menu li li a.active,
+  #block-superfish-1 ul.sf-menu li li a:visited {
+    padding: .5em;
+  }
+
+
+/* Secondary menu
+-------------------------------------------------------------- */
+
+#block-menu-menu-secondary-links {
+  padding-top: 1em;
+}
+
+#block-menu-menu-secondary-links h2.title { display: none; }
+
+#block-menu-menu-secondary-links ul.menu { text-align: right; font-size: 1.1em; }
+  #block-menu-menu-secondary-links .inner { margin-left: 0; margin-right: 0; }
+
+
+/* Styles for links */
+#block-menu-menu-secondary-links ul.menu li a:link,
+#block-menu-menu-secondary-links ul.menu li a:visited {
+  color: #38735f;
+  white-space: nowrap;
+}
+
+
+#main-menu-wrapper {
+  clear: none;
+}
+
+/**
+ * Mobile menu block
+ */
+#header-group-inner .block-menu-block {
+  display: none;
+}
+
+#secondary-menu-links {
+  padding: 0;
+}

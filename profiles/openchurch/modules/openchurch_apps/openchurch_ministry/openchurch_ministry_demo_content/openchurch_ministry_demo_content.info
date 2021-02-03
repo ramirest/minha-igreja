@@ -1,0 +1,14 @@
+name = "OpenChurch Ministry Demo Content"
+description = "Sample ministry content for the OpenChurch Ministry app"
+core = "7.x"
+package = "OpenChurch"
+php = "5.2.4"
+version = "7.x-1.0-alpha1"
+project = "openchurch_ministry"
+dependencies[] = "openchurch_ministry"
+; Information added by Drupal.org packaging script on 2014-12-23
+version = "7.x-2.1-alpha4"
+core = "7.x"
+project = "openchurch_apps"
+datestamp = "1419344951"
+

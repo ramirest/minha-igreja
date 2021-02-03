@@ -1,0 +1,110 @@
+
+/* ---------- Color Module Styles ----------- */
+
+body,
+body.overlay {
+  color: #3b3b3b;
+}
+.comment .comment-arrow {
+  border-color: #ffffff;
+}
+#page,
+#main-wrapper,
+#main-menu-links li a.active,
+#main-menu-links li.active-trail a {
+  background: #ffffff;
+}
+.tabs ul.primary li a.active {
+  background-color: #ffffff;
+}
+.tabs ul.primary li.active a {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+#header {
+  background-color: #cf3535;
+  background-image: -moz-linear-gradient(top, #cd2d2d 0%, #cf3535 100%);
+  background-image: -ms-linear-gradient(top, #cd2d2d 0%, #cf3535 100%);
+  background-image: -o-linear-gradient(top, #cd2d2d 0%, #cf3535 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #cd2d2d), color-stop(1, #cf3535));
+  background-image: -webkit-linear-gradient(top, #cd2d2d 0%, #cf3535 100%);
+  background-image: linear-gradient(top, #cd2d2d 0%, #cf3535 100%);
+}
+a {
+  color: #d6121f;
+}
+a:hover,
+a:focus,
+a:active {
+}
+.sidebar .block {
+  background-color: #f1f4f0;
+}
+.sidebar h2,
+#openchurch-ministry-detail .register-online .pane-content a,
+#openchurch-event-detail .register-online .pane-content a {
+  background: #333333;
+  color: #ffffff;
+}
+
+#page-wrapper,
+#footer-wrapper {
+  background: #1f1d1c;
+}
+.region-header,
+.region-header a,
+.region-header li a.active,
+#name-and-slogan,
+#name-and-slogan a,
+#secondary-menu-links li a,
+#site-name a:link,
+#site-name a:visited,
+#site-name a:hover,
+#site-name a:active,
+#block-superfish-1 ul.sf-menu a,
+#block-superfish-1 ul.sf-menu a:visited {
+  color: #ffffff;
+}
+
+#triptych h2 {
+  background: #cccccc;
+  color: #3b3b3b;
+}
+
+#block-superfish-1 ul.sf-menu a.active,
+#block-superfish-1 ul.sf-menu a.active:visited {
+  border-top-color: #cccccc;
+}
+
+#block-superfish-1 ul.sf-menu ul {
+  background: #cccccc;
+}
+
+body #block-superfish-1 ul.sf-menu a:hover,
+body #block-superfish-1 ul.sf-menu a:active,
+body #block-superfish-1 ul.sf-menu a:focus {
+  border-top: 7px solid #eeefff;
+}
+
+#block-superfish-1 ul.sf-menu li li a:hover {
+  background: #eeefff;
+}
+
+#block-superfish-1 ul.sf-menu li li a,
+#block-superfish-1 ul.sf-menu li li a.active,
+#block-superfish-1 ul.sf-menu li li a:visited {
+  border-top: 5px solid #eeeeee !important;
+  color: #000000;
+}
+
+#block-superfish-1 ul.sf-menu ul {
+  border: 1px solid #eeeeee;
+}
+
+#block-superfish-1 ul.sf-menu li li a:hover {
+  border-top: 5px solid #333333 !important;
+}
+
+h3.title, h2.pane-title {
+  background: #cccccc;
+}

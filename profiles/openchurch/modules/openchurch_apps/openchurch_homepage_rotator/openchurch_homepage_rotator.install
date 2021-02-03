@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ */
+function openchurch_homepage_rotator_install(){
+  //assign frontpage to the homepage panel
+  variable_set('site_frontpage', 'front');
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function openchurch_homepage_rotator_uninstall(){
+
+}

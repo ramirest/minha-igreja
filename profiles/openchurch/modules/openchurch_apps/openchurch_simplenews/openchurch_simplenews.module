@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Code for the OpenChurch Simplenews feature.
+ */
+
+include_once 'openchurch_simplenews.features.inc';
+
+/**
+ * Implements hook_enable().
+ */
+function openchurch_simplenews_enable() {
+  if (module_exists('block')) {
+    db_query('UPDATE {block} SET status = 1, region = :region WHERE delta = :delta AND module = :module',
+      array(':delta' => 0, ':module' => 'simplenews', ':region' => 'sidebar_second'));
+  }
+}

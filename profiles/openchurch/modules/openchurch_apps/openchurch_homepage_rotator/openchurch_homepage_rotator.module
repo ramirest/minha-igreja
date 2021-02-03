@@ -1,0 +1,14 @@
+<?php
+
+include_once('openchurch_homepage_rotator.features.inc');
+include_once('openchurch_homepage_rotator.install');
+
+/**
+ * Implements hook_apps_app_info().
+ */
+function openchurch_homepage_rotator_apps_app_info() {
+  return array(
+    'demo content description' => 'This will populate the homepage rotator with a couple of sample homepage rotator content for demonstration.',
+    'demo content module' => 'openchurch_homepage_rotator_demo_content',
+  );
+}

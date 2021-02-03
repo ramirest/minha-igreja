@@ -1,0 +1,89 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_video_install().
+ */
+function openchurch_video_install() {
+
+  // Delete old settings
+  db_query('DELETE FROM {file_display} WHERE name = :name', array(':name' => 'video__preview__media_vimeo_image'));
+  db_query('DELETE FROM {file_display} WHERE name = :name', array(':name' => 'video__preview__media_youtube_image'));
+
+  $display = array(
+    'status' => 1,
+    'weight' => 2,
+    'settings' => array(
+      'image_style' => 'medium',
+    ),
+    'name' => 'video__preview__media_vimeo_image',
+    'table' => 'file_display',
+    'type' => 'Local',
+    'export_type' => EXPORT_IN_DATABASE
+  );
+
+  drupal_write_record('file_display', $display);
+
+  $display = array(
+    'status' => 1,
+    'weight' => 1,
+    'settings' => array(
+      'image_style' => 'medium',
+    ),
+    'name' => 'video__preview__media_youtube_image',
+    'table' => 'file_display',
+    'type' => 'Local',
+    'export_type' => EXPORT_IN_DATABASE
+  );
+
+  drupal_write_record('file_display', $display);
+}
+
+/**
+ * Migrate to new OC video field. This is required to backwards support 1x upgrades.
+ */
+function openchurch_video_update_7000(&$sandbox) {
+  // Upgrade video field
+
+  // Prepare and create the target field instance.
+  $source_instance = field_info_instance('node', 'field_oc_video', 'openchurch_video');
+
+  $target_field = field_info_field('field_oc_video2');
+  $target_instance = field_info_instance('node', $target_field['field_name'], 'openchurch_video');
+
+  $query = new EntityFieldQuery();
+  $query
+    ->entityCondition('entity_type', $target_instance['entity_type'])
+    ->entityCondition('bundle', $target_instance['bundle']);
+
+  // Get an array of entities.
+  $entities = (array) $query
+    ->execute();
+  $entities = reset($entities);
+
+  // Load field data on the entities.
+  field_attach_load($target_instance['entity_type'], $entities);
+
+  foreach ($entities as $id => $entity) {
+    // Update each entity.
+    if (!empty($entity->{$source_instance['field_name']})) {
+      foreach ($entity->{$source_instance['field_name']} as $lang => $values) {
+        foreach ($values as $key => $value) {
+          $entity->{$target_instance['field_name']}[$lang][$key] = $value + array(
+            'description' => '',
+            'display' => 1,
+          );
+        }
+      }
+      field_attach_presave($target_instance['entity_type'], $entity);
+      field_attach_update($target_instance['entity_type'], $entity);
+    }
+  }
+
+  // Remove the old field.
+  field_delete_field("field_oc_video");
+  field_purge_batch(5);
+}

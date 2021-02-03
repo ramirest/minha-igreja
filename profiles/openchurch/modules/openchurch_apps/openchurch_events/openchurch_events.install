@@ -1,0 +1,20 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ */
+function openchurch_events_install() {
+  db_query('REPLACE INTO {date_format_type} VALUES (:type, :title, 0)', array(':type' => 'openchurch_short_date', ':title' => 'OpenChurch Short Date'));
+  db_query('REPLACE INTO {date_formats} VALUES (NULL, :format, :type, 0)', array(':format' => 'm.d.y', ':type' => 'short'));
+  variable_set('date_format_openchurch_short_date', 'm.d.y');
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function openchurch_events_uninstall() {
+
+}

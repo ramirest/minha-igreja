@@ -1,0 +1,28 @@
+# Portuguese, Brazil translation of OpenChurch (7.x-2.1-beta3)
+# Copyright (c) 2015 by the Portuguese, Brazil translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenChurch (7.x-2.1-beta3)\n"
+"POT-Creation-Date: 2015-01-19 11:14+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Portuguese, Brazil\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Home"
+msgstr "Início"
+msgid "Title"
+msgstr "Título"
+msgid "Webform"
+msgstr "Webform"
+msgid ""
+"Create a new form or questionnaire accessible to users. Submission "
+"results and statistics are recorded and accessible to privileged "
+"users."
+msgstr ""
+"Criar um novo formulário ou questionário acessível aos usuários. "
+"Os envios e as estatísticas são registrados e acessíveis para "
+"usuários privilegiados."

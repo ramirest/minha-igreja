@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * Implements hook_apps_stores_info.
+ */
+function openchurch_apps_apps_servers_info() {
+  $info =  drupal_parse_info_file(dirname(__file__) . '/openchurch_apps.info');
+
+  return array(
+    'openchurch' => array(
+      'title' => 'OpenChurch',
+      'description' => "Apps for the OpenChurch distribution.",
+      'manifest' => url(drupal_get_path('module', 'openchurch_apps'), array('absolute' => TRUE)).'/apps.js',
+      'profile' => 'openchurch',
+      'profile_version' => isset($info['version']) ? $info['version'] : '7.x-2.x-dev',
+      'server_name' => $_SERVER['SERVER_NAME'],
+      'server_ip' => $_SERVER['SERVER_ADDR'],
+    ),
+  );
+}
+
+/**
+ * Implements hook_apps_init().
+ */
+function openchurch_apps_init() {
+  if (arg(0) != 'admin') {
+    drupal_add_css(drupal_get_path('module', 'openchurch_apps').'/openchurch-features.css');
+  }
+}

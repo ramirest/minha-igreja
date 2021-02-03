@@ -1,0 +1,15 @@
+name = "OpenChurch Blog Demo Content"
+description = "Sample blogs for the OpenChurch Blog app."
+core = "7.x"
+;We don't need this on the features page
+package = "OpenChurch"
+php = "5.2.4"
+version = "7.x-1.0-alpha1"
+project = "openchurch_blog_demo_content"
+dependencies[] = "openchurch_blog"
+; Information added by Drupal.org packaging script on 2014-12-23
+version = "7.x-2.1-alpha4"
+core = "7.x"
+project = "openchurch_apps"
+datestamp = "1419344952"
+

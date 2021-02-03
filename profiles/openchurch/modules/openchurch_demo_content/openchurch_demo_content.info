@@ -1,0 +1,18 @@
+name = OpenChurch Demo Content
+description = Demo content for the OpenChurch profile that doesn't belong to any one feature.
+core = 7.x
+package = OpenChurch
+version = 7.x-1.11-beta3
+project = openchurch_demo_content
+dependencies[] = defaultcontent
+dependencies[] = features
+dependencies[] = webform
+features[content][] = oc_webform
+features[features_api][] = api:2
+
+; Information added by Drupal.org packaging script on 2014-12-26
+version = "7.x-2.1-beta3"
+core = "7.x"
+project = "openchurch"
+datestamp = "1419631446"
+

@@ -1,0 +1,51 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ */
+function openchurch_blog_install() {
+  // Add Blog Topic vocab
+  $settings = (object) array(
+    'name' => 'Blog Topic',
+    'machine_name' => 'openchurch_blog_topic',
+    'description' => '',
+    'hierarchy' => 0,
+    'module' => 'openchurch_blog',
+    'weight' => 0,
+  );
+
+  drupal_write_record('taxonomy_vocabulary', $settings);
+
+  $vid = $settings->vid;
+
+  /**
+   * Save blog terms
+   */
+  $blog_terms = array(
+    'Uncategorized',
+    'Weekly Newsletters',
+  );
+
+  foreach ($blog_terms as $term_name){
+    $term = array(
+      'vid' => $vid,
+      'name' => $term_name
+    );
+
+    drupal_write_record('taxonomy_term_data', $term);
+
+    $term_hierarchy = array('tid' => $term['tid']);
+
+    drupal_write_record('taxonomy_term_hierarchy', $term_hierarchy);
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function openchurch_blog_uninstall(){
+
+}
